@@ -1,0 +1,100 @@
+/* Styles specific to Grade Curricular pages */
+
+.grades-page{
+	padding: 4rem 8%;
+}
+
+.page-header h1{
+	font-size: 3.2rem;
+	color: var(--vermelho);
+	text-align: center;
+	margin-bottom: .6rem;
+}
+
+.page-header .lead{
+	text-align: center;
+	color: var(--luz);
+	font-size: 1.6rem;
+	margin-bottom: 2.5rem;
+}
+
+.grades-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+	gap: 2rem;
+	align-items: start;
+}
+
+.grade-card{
+	background: var(--branco);
+	padding: 2rem;
+	border-radius: .8rem;
+	box-shadow: var(--box-shadow);
+	text-align: center;
+}
+
+.grade-card h3{
+	font-size: 2.2rem;
+	color: var(--preto);
+	margin-bottom: .6rem;
+}
+
+.grade-card p{
+	color: var(--luz);
+	margin-bottom: .8rem;
+}
+
+.grade-card ul{
+	text-align: left;
+	margin: 1rem auto 1.5rem;
+	max-width: 28rem;
+}
+
+.grade-card.placeholder{
+	opacity: .85;
+}
+
+.grades-detail{
+	padding: 3rem 8%;
+}
+
+.grade-list ul{
+	max-width: 60rem;
+	margin: 1rem auto 2rem;
+	font-size: 1.6rem;
+	color: var(--luz);
+}
+
+@media (max-width: 700px){
+	.grades-page{ padding: 2rem; }
+	.page-header h1{ font-size: 2.4rem; }
+}
+
+/* styling for inline year detail sections */
+.grade-detail-section{
+	padding: 3rem 8%;
+	max-width: 1000px;
+	margin: 2rem auto;
+	background: var(--branco);
+	border-radius: .8rem;
+	box-shadow: var(--box-shadow);
+}
+
+.grade-detail-section h2{
+	font-size: 2.6rem;
+	color: var(--vermelho);
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.grade-detail-section ul{
+	margin: 1rem auto 1.6rem;
+	max-width: 70rem;
+	font-size: 1.6rem;
+}
+
+.grade-detail-section p{ text-align: center; color: var(--luz); margin-bottom: 1rem; }
+
+/* anchor target spacing fix */
+:target{ scroll-margin-top: 90px; }
+

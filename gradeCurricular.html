@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/etecano.css">
+  <link rel="stylesheet" href="css/gradeCurricular.css">
+  <title>Manual do Programador Etecano</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<!-- header / navbar copied from etecano.html -->
+<header class="header">
+  <a href="etecano.html" class="logo">Etec<span>Ano</span></a>
+
+  <nav class="navbar">
+    <a href="gradeCurricular.html">Grade Curricular</a>
+    <a href="#centroPaulaSouza">Centro Paula Souza</a>
+    <a href="#fatec">Fatec</a>
+    <a href="#formulario">Formulário</a>
+  </nav>
+
+  <div class="icons">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <div id="info-btn" class="fas fa-info-circle"></div>
+    <div id="pesquisar-btn" class="fas fa-search"></div>
+    <div id="login-btn" class="fas fa-user"></div>
+  </div>
+  
+  <form action="" class="search-form">
+    <input type="search" name="" id="search-box" placeholder="Pesquisar...">
+    <label for="pesquisar-box" class="fas fa-search"></label>
+  </form>
+
+ <!--login-->
+ <form action="" class="login-form">
+    <h3>Login</h3>
+    <input type="email" placeholder="Insira seu email" class="box">
+    <input type="password" placeholder="Insira sua senha" class="box">
+    <div class="flex">
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <label for="lembrar-me">Lembrar-me</label>
+    <a href="#">Esqueceu sua senha?</a>
+    </div>
+
+    <input type="submit" value="login" class="btn" id="login">
+    <p>Não possui uma conta<a href="#"> Crie uma!</a></p>
+
+ </form>
+ <!--login fim-->
+</header>
+
+<!-- contact panel (copied from etecano.html) -->
+<div class="contact-info">
+
+<div id="close-contact-info" class="fas fa-times"></div>
+  
+<div class="info">
+<i class="fas fa-phone"></i>
+<h3>número de telefone</h3>
+<p>+14 3322-4908</p>
+</div>
+
+<div class="info">
+<i class="fas fa-envelope"></i>
+<h3>endereço de email</h3>
+<p>E066acad@cps.sp.gov.br</p>
+</div>
+
+<div class="info">
+<i class="fas fa-map-marker-alt"></i>
+<h3>Localização da Sede</h3>
+<p>Ourinhos SP, Brasil</p>
+</div>
+
+<div class="share">
+    <a href="#" class="Fab fa-facebook-f"></a>
+    <a href="#" class="Fab fa-twitter"></a>
+    <a href="#" class="Fab fa-instagram"></a>
+    <a href="#" class="Fab fa-linkedin"></a>
+</div>
+
+</div>
+
+<main class="grades-page">
+  <section class="page-header">
+    <h1>Grade Curricular</h1>
+    <p class="lead">Ensino Médio Técnico — Curso: Análise e Desenvolvimento de Sistemas</p>
+  </section>
+
+  <!-- detalhe dos anos: tudo na mesma página -->
+  <section id="ano1" class="grade-detail-section">
+    <h2>1º Ano — Análise e Desenvolvimento de Sistemas</h2>
+    <p>Disciplinas e carga horária (exemplo):</p>
+    <ul>
+      <li>Matemática Aplicada — 160h</li>
+      <li>Lógica de Programação — 120h</li>
+      <li>Algoritmos e Estruturas — 140h</li>
+      <li>Redes e Computação — 80h</li>
+    </ul>
+    <a class="btn" href="#top">Voltar ao topo</a>
+  </section>
+
+  <section id="ano2" class="grade-detail-section">
+    <h2>2º Ano — Análise e Desenvolvimento de Sistemas</h2>
+    <p>Disciplinas e carga horária (exemplo):</p>
+    <ul>
+      <li>Programação Orientada a Objetos — 160h</li>
+      <li>Bancos de Dados I — 140h</li>
+      <li>Sistemas Operacionais — 100h</li>
+    </ul>
+    <a class="btn" href="#top">Voltar ao topo</a>
+  </section>
+
+  <section id="ano3" class="grade-detail-section">
+    <h2>3º Ano — Análise e Desenvolvimento de Sistemas</h2>
+    <p>Disciplinas e carga horária (exemplo):</p>
+    <ul>
+      <li>Desenvolvimento Web — 180h</li>
+      <li>Engenharia de Software — 160h</li>
+      <li>Projeto Integrador — 200h</li>
+    </ul>
+    <a class="btn" href="#top">Voltar ao topo</a>
+  </section>
+
+  <section class="grades-container">
+    <article class="grade-card">
+      <h3>1º Ano</h3>
+      <p>Componentes iniciais do curso técnico integrados ao Ensino Médio.</p>
+      <ul>
+        <li>Biologia</li>
+        <li>Filosofia</li>
+        <li>Física</li>
+        <li>Fundamentos da Informática</li>
+        <li>História</li>
+        <li>Língua Inglesa</li>
+        <li>Língua Portuguesa</li>
+        <li>Matemática</li>
+        <li>Química</li>
+        <li>Lógica de Programação</li>
+        <li>Técnicas de Programação e Algorítmos</li>
+        <li>Programação Web I</li>
+        <li>Arte</li>
+        <li>Design Digital</li>
+     </ul>
+      <a class="btn" href="#ano1">Ver Grade do 1º Ano</a>
+    </article>
+
+    <article class="grade-card">
+      <h3>2º Ano</h3>
+      <p>Continuação dos fundamentos e introdução a banco de dados.</p>
+      <ul>
+        <li>Análise e Projeto de Sistemas</li>
+        <li>Bancos de Dados I</li>
+        <li>Biologia</li>
+        <li>Desenvolvimentod de Sistemas</li>
+        <li>Educação Física</li>
+        <li>Física</li>
+        <li>Geografia</li>
+        <li>História</li>
+        <li>Língua Inglesa</li>
+        <li>Língua Portuguesa</li>
+        <li>Matemática</li>
+        <li>Programação de Aplicativos Mobile I</li>
+        <li>Programação Web II</li>
+        <li>Química</li>
+        <li>Sistemas Embarcados</li>
+      </ul>
+      <a class="btn" href="#ano2">Ver Grade do 2º Ano</a>
+    </article>
+
+    <article class="grade-card">
+      <h3>3º Ano</h3>
+      <p>Apresenta disciplinas técnicas avançadas e projetos integradores.</p>
+      <ul>
+        <li>Língua Portuguesa</li>
+        <li>Língua Inglesa</li>
+        <li>Educação Física</li>
+        <li>Matemática</li>
+        <li>História</li>
+        <li>Geografia</li>
+        <li>Sociologia</li>
+        <li>Programação Web III</li>
+        <li>Banco de Dados II</li>
+        <li>rrogramação de Aplicativos Mobile II</li>
+        <li>Ética e Cidadania Organizacional</li>
+        <li>Internet, Protocolos e Segurança de Sistemas da Informação</li>
+        <li>Planejamento e Desenvolvimento do Trabalho de Conclusão de Curso em Desenvolvimento de Sistemas</li>
+        <li>Qualidade e Teste de Software</li>
+      </ul>
+      <a class="btn" href="#ano3">Ver Grade do 3º Ano</a>
+    </article>
+
+    <article class="grade-card placeholder">
+      <h3>4º Ano (Faculdade)</h3>
+      <p>Espaço reservado para a grade dos semestres superiores / faculdade.</p>
+      <p class="muted">Em breve</p>
+    </article>
+
+    <article class="grade-card placeholder">
+      <h3>5º Ano (Faculdade)</h3>
+      <p>Espaço reservado para a grade dos semestres superiores / faculdade.</p>
+      <p class="muted">Em breve</p>
+    </article>
+  </section>
+</main>
+
+<script src="js/etecano.js"></script>
+</body>
+</html>
