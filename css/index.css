@@ -1,91 +1,81 @@
-
-main section{
-  max-width: 40rem;
-  width: 100%;
-  margin: 0 auto;
-  background: var(--branco);
-  box-shadow: var(--box-shadow);
-  padding: 2.5rem;
-  border-radius: 12px;
+:root{
+  --primary:#f5bf23;
+  --dark:#1e1e1e;
+  --light:#f9f9f9;
+  --red:#e33;
 }
 
-/* section titles */
-main section h2{
-  font-size: 2.2rem;
-  color: var(--preto);
-  text-transform: uppercase;
-  letter-spacing: .4px;
-  margin-bottom: 1.6rem !important;
+body{
+  margin:0;
+  padding:0;
+  background:linear-gradient(135deg, #f5bf23, #ffdd70);
+  font-family: "Poppins", sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
 }
 
-/* form layout */
-#register-form,
-#login-form{
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-  margin-bottom: 1.6rem;
+.auth-box{
+  background:white;
+  width:380px;
+  padding:2.5rem;
+  border-radius:18px;
+  box-shadow:0 1rem 2.5rem rgba(0,0,0,.15);
 }
 
-/* input boxes */
-.box{
-  width: 100%;
-  padding: 1.2rem 1.4rem;
-  border-radius: 8px;
-  background: var(--luz-bg);
-  color: var(--preto);
-  font-size: 1.6rem;
-  box-shadow: inset 0 1px 0 rgba(0,0,0,.03);
+.auth-box h2{
+  margin:0 0 1.6rem;
+  text-align:center;
+  font-size:2rem;
+  font-weight:600;
+  color:var(--dark);
 }
 
-/* subtle focus */
-.box:focus{
-  box-shadow: 0 0 0 3px rgba(245,191,35,.08);
+.input{
+  width:100%;
+  padding:1rem;
+  border-radius:8px;
+  border:1px solid #ddd;
+  margin-bottom:1rem;
+  font-size:1.1rem;
 }
 
-/* primary action buttons inside the forms */
-#register-form .btn{
-  background: transparent;
-  color: var(--preto);
-  border: 2px solid var(--luz);
-  padding: .95rem 1.6rem;
-  border-radius: 8px;
-  font-size: 1.7rem;
+.btn{
+  width:100%;
+  padding:1rem;
+  background:var(--primary);
+  border:none;
+  color:white;
+  font-size:1.2rem;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:.4rem;
+  transition:.2s;
 }
 
-#register-form .btn:hover{
-  background: var(--luz);
-  color: var(--branco);
-  transform: translateY(-2px);
-  box-shadow: 0 .6rem 1rem rgba(0,0,0,.06);
+.btn:hover{
+  background:#d8a51b;
 }
 
-/* login button: default light, on hover -> vermelho + cor da luz (conforme pedido) */
-#login-form .btn{
-  background: var(--luz);
-  color: var(--vermelho);
-  padding: .95rem 1.6rem;
-  border-radius: 8px;
-  font-size: 1.7rem;
-  border: 2px solid transparent;
+.link{
+  text-align:center;
+  margin-top:1rem;
 }
 
-#login-form .btn:hover{
-  background: var(--vermelho);
-  color: var(--luz);          /* <-- cor da luz conforme solicitado */
-  transform: translateY(-2px);
-  box-shadow: 0 .6rem 1rem rgba(0,0,0,.06);
+.link a{
+  color:var(--dark);
+  font-weight:600;
+  text-decoration:none;
 }
 
-/* small helpers */
-main section hr{ border: none; height: 1px; background: rgba(0,0,0,.06); margin: 2rem 0; }
-#msg{ font-size: 1.5rem; }
-
-/* responsive */
-@media (max-width: 540px){
-  main section{ padding: 1.6rem; border-radius: 10px; }
-  .logo{ font-size: 2rem; }
-  .navbar a{ font-size: 1.6rem; }
-  .box{ font-size: 1.5rem; padding: 1rem; }
-  #login-form .btn, #register-form .btn{ font-size: 1.6rem; padding: .9rem; }
+.error{
+  color:var(--red);
+  text-align:center;
+  margin-bottom:.6rem;
+}
+.success{
+  color:green;
+  text-align:center;
+  margin-bottom:.6rem;
 }
