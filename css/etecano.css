@@ -362,6 +362,10 @@ html::-webkit-scrollbar-thumb{
   z-index: 1100;
   padding: 0 2rem;
   padding-top: 5rem;
+  /* ensure content can scroll if panel is taller than viewport */
+  overflow-y: auto;
+  /* space at bottom so absolutely-positioned share icons don't touch edge */
+  padding-bottom: 6rem;
   display: none;
 }
 
@@ -370,22 +374,33 @@ html::-webkit-scrollbar-thumb{
   display: block;
 }
 
-.contact-info .info{
-  padding: 2rem 0;
+.contact-info .share{
+  /* place share icons above the bottom so they're always visible */
+  position: absolute;
+  left: 50%;
+  bottom: 2.5rem;
+  transform: translateX(-50%);
+  padding-top: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
-.contact-info .info i{
-  /* expanded IconesBox() */
-  display: inline-block;
+.contact-info .share a{
+  /* compact inline icons without extra top border so they don't push content down */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 5rem;
   width: 5rem;
-  line-height: 5rem;
+  line-height: 1;
   font-size: 2rem;
   background: var(--luz-bg);
-  color: var(--vermelho);
+  color: var(--preto);
   cursor: pointer;
   text-align: center;
-  margin-bottom: .5rem;
+  border-top: none;
+  margin: 0;
 }
 
 .contact-info .info i:hover{
@@ -465,7 +480,7 @@ html::-webkit-scrollbar-thumb{
   font-size: 2rem;
 }
 
-h1{
+h1, h2{
   font-size: 3rem;
   color: var(--vermelho);
   text-align: center;
@@ -482,4 +497,30 @@ p{
 /* Make body paragraphs justified for better reading layout */
 p{
   text-align: justify;
+}
+
+/* --- Ensure contact panel icons and text are large and readable --- */
+.contact-info .info i{
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  font-size: 2.6rem;
+}
+
+.contact-info .info h3{
+  font-size: 2.2rem;
+}
+
+.contact-info .info p{
+  font-size: 1.8rem;
+}
+
+.contact-info .share a{
+  height: 6rem;
+  width: 6rem;
+  font-size: 2.4rem;
+}
+
+.contact-info .share a i{
+  font-size: 2.4rem;
 }
