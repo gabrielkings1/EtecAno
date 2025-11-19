@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "php/db.php";
+require "conexao.php";
 
 $msg = "";
 
