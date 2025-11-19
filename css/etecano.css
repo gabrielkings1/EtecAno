@@ -524,3 +524,61 @@ p{
 .contact-info .share a i{
   font-size: 2.4rem;
 }
+
+/* --- Created section styles (Quando foi Criado) --- */
+.created-section{
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.created-section h2{
+  font-size: 3rem;
+  color: var(--vermelho);
+  margin-bottom: 2rem;
+}
+
+.created-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.created-content img{
+  max-width: 480px;
+  width: 48%;
+  height: auto;
+  border-radius: .6rem;
+  box-shadow: var(--box-shadow);
+  object-fit: cover;
+}
+
+.created-text{
+  max-width: 48rem;
+  text-align: center;
+}
+
+.created-text h4{
+  font-size: 2.2rem;
+  color: var(--preto);
+  margin-bottom: .6rem;
+}
+
+.created-text .muted{
+  font-size: 1.6rem;
+  color: var(--luz);
+}
+
+@media (max-width: 700px){
+  .created-section h2{
+    font-size: 2.4rem;
+  }
+  .created-content img{
+    width: 80%;
+    max-width: 420px;
+  }
+  .created-text h4{
+    font-size: 1.9rem;
+  }
+}
