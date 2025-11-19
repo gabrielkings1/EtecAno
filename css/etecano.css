@@ -464,3 +464,22 @@ html::-webkit-scrollbar-thumb{
   text-align: center;
   font-size: 2rem;
 }
+
+h1{
+  font-size: 3rem;
+  color: var(--vermelho);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+p{
+  font-size: 1.6rem;
+  color: var(--luz);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Make body paragraphs justified for better reading layout */
+p{
+  text-align: justify;
+}
