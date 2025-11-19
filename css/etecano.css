@@ -23,9 +23,6 @@
   transition: all .2s linear; 
 }
 
-/* mixins removed — their properties expanded where used */
-
-/* scrollbar styles (expanded from nested SCSS) */
 html{
   font-size: 62.5%;
   overflow-x: hidden;
@@ -78,7 +75,6 @@ html::-webkit-scrollbar-thumb{
   z-index: 1000;
 }
 
-/* expanded tituloTexto(2.5rem) for .logo */
 .logo{
   font-size: 2.5rem;
   color: var(--luz);
@@ -88,7 +84,6 @@ html::-webkit-scrollbar-thumb{
   color: var(--vermelho);
 }
 
-/* expanded tituloTexto(2rem) for .navbar a */
 .navbar a{
   font-size: 2rem;
   color: var(--luz);
@@ -99,7 +94,6 @@ html::-webkit-scrollbar-thumb{
   color: var(--vermelho);
 }
 
-/* expanded IconesBox() for .icons div */
 .icons div{
   height: 5rem;
   width: 5rem;
@@ -131,13 +125,12 @@ html::-webkit-scrollbar-thumb{
   }
 }
 
-/* Desktop / padrão */
 .header #menu-btn{
-  display: none; /* botão só aparece em telas pequenas */
+  display: none; 
 }
 
 .header .navbar{
-  position: static;    /* não absoluto em desktop */
+  position: static;    
   top: auto;
   left: auto;
   right: auto;
@@ -145,7 +138,7 @@ html::-webkit-scrollbar-thumb{
   border-top: none;
   border-bottom: none;
   clip-path: none;
-  display: flex;       /* links alinhados em linha no header */
+  display: flex;      
   align-items: center;
   gap: 1rem;
 }
@@ -157,14 +150,14 @@ html::-webkit-scrollbar-thumb{
   color: var(--luz);
 }
 
-/* ícones à direita */
+/*ícones à direita*/
 .header .icons{
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-/* responsive: comportamento para telas <= 991px */
+/*reponsividade em 991px*/
 @media (max-width:991px){
   html{
     font-size: 55%;
@@ -175,7 +168,7 @@ html::-webkit-scrollbar-thumb{
   }
 
   .header #menu-btn{
-    display: inline-block; /* mostra o botão de menu em mobile */
+    display: inline-block;
   }
 
   .header .navbar{
@@ -187,7 +180,7 @@ html::-webkit-scrollbar-thumb{
     border-top: var(--border);
     border-bottom: var(--border);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    display: block; /* menu vertical quando aberto */
+    display: block;
   }
 
   .header .navbar.active{
@@ -238,13 +231,13 @@ html::-webkit-scrollbar-thumb{
 
 .search-form label{
   font-size: 2.5rem;
-  color: var(--vermelho); /* use --preto em vez de --black (não definido) */
+  color: var(--vermelho); 
   cursor: pointer;
   margin: 0 1rem;
 }
 
 .search-form label:hover{
-  color: var(--vermelho); /* use --vermelho em vez de --red (não definido) */
+  color: var(--vermelho); 
 }
 
 .login-form{
@@ -362,9 +355,7 @@ html::-webkit-scrollbar-thumb{
   z-index: 1100;
   padding: 0 2rem;
   padding-top: 5rem;
-  /* ensure content can scroll if panel is taller than viewport */
   overflow-y: auto;
-  /* space at bottom so absolutely-positioned share icons don't touch edge */
   padding-bottom: 6rem;
   display: none;
 }
@@ -375,7 +366,6 @@ html::-webkit-scrollbar-thumb{
 }
 
 .contact-info .share{
-  /* place share icons above the bottom so they're always visible */
   position: absolute;
   left: 50%;
   bottom: 2.5rem;
@@ -387,7 +377,6 @@ html::-webkit-scrollbar-thumb{
 }
 
 .contact-info .share a{
-  /* compact inline icons without extra top border so they don't push content down */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -409,7 +398,6 @@ html::-webkit-scrollbar-thumb{
 }
 
 .contact-info .info h3{
-  /* expanded tituloTexto(2rem) */
   font-size: 2rem;
   color: var(--preto);
   text-transform: capitalize;
@@ -417,7 +405,6 @@ html::-webkit-scrollbar-thumb{
 }
 
 .contact-info .info p{
-  /* expanded graficoTexto (choose sensible size) */
   font-size: 1.6rem;
   color: var(--luz);
   line-height: 1.5;
@@ -428,7 +415,6 @@ html::-webkit-scrollbar-thumb{
 }
 
 .contact-info .share a{
-  /* expanded IconesBox() + extra rules */
   display: inline-block;
   height: 5rem;
   width: 5rem;
@@ -447,16 +433,14 @@ html::-webkit-scrollbar-thumb{
   color: var(--branco);
 }
 
-/* garantir que os ícones do Font Awesome apareçam dentro do painel de contato */
 .contact-info .share a,
 .contact-info .share a i {
-  /* Força as famílias usadas pelo Font Awesome */
   font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands", sans-serif !important;
   font-style: normal;
   line-height: 1;
 }
 
-/* Font-weight correto para ícones 'fas' (solid) e ajuste para 'fab' (brands) */
+/*Font-weight para ícones share*/
 .contact-info .share a.fas,
 .contact-info .share a i.fas {
   font-weight: 900;
@@ -467,7 +451,7 @@ html::-webkit-scrollbar-thumb{
   font-weight: 400;
 }
 
-/* garante contraste e visibilidade */
+/*contraste e visibilidade*/
 .contact-info .share a,
 .contact-info .share a i{
   color: var(--preto);
@@ -494,12 +478,10 @@ p{
   margin-bottom: 1rem;
 }
 
-/* Make body paragraphs justified for better reading layout */
 p{
   text-align: justify;
 }
 
-/* --- Ensure contact panel icons and text are large and readable --- */
 .contact-info .info i{
   height: 6rem;
   width: 6rem;
@@ -525,7 +507,6 @@ p{
   font-size: 2.4rem;
 }
 
-/* --- Created section styles (Quando foi Criado) --- */
 .created-section{
   padding: 3rem 2rem;
   text-align: center;
