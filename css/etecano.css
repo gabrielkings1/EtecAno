@@ -8,7 +8,7 @@
   --luz: #666;
   --luz-bg: #eee;
   --vermelho: #8f1010;
-  --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  --box-shadow: 0 .1rem 5rem rgba(0, 0, 0, 0.24);
   --border: 1rem solid rgba(0,0,0,.3);
 }
 
@@ -29,14 +29,17 @@ html{
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
 }
+
 html::-webkit-scrollbar{
   width: 1rem;
 }
+
 html::-webkit-scrollbar-track{
   background: transparent;
 }
+
 html::-webkit-scrollbar-thumb{
-  background: var(--amarelo);
+  background: var(--vermelho);
 }
 
 .btn{
@@ -68,6 +71,7 @@ html::-webkit-scrollbar-thumb{
   left: 0;
   right: 0;
   box-shadow: var(--box-shadow);
+  background-color: var(--branco);
   padding: 1.5rem 10%;
   display: flex;
   align-items: center;
@@ -83,6 +87,7 @@ html::-webkit-scrollbar-thumb{
 .logo span{
   color: var(--vermelho);
 }
+
 
 .navbar a{
   font-size: 2rem;
@@ -150,14 +155,12 @@ html::-webkit-scrollbar-thumb{
   color: var(--luz);
 }
 
-/*ícones à direita*/
 .header .icons{
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-/*reponsividade em 991px*/
 @media (max-width:991px){
   html{
     font-size: 55%;
@@ -440,7 +443,6 @@ html::-webkit-scrollbar-thumb{
   line-height: 1;
 }
 
-/*Font-weight para ícones share*/
 .contact-info .share a.fas,
 .contact-info .share a i.fas {
   font-weight: 900;
@@ -451,7 +453,6 @@ html::-webkit-scrollbar-thumb{
   font-weight: 400;
 }
 
-/*contraste e visibilidade*/
 .contact-info .share a,
 .contact-info .share a i{
   color: var(--preto);
@@ -471,14 +472,19 @@ h1, h2{
   margin: 2rem 0;
 }
 
-p{
-  font-size: 1.6rem;
+#subtitulo{
+  color: var(--vermelho);
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+p#textoEtec{
+  font-size: 2.5rem;
   color: var(--luz);
   line-height: 1.5;
   margin-bottom: 1rem;
-}
-
-p{
+  padding-left: 20vh;
+  padding-right: 20vh;
   text-align: justify;
 }
 
