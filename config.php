@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'grade_ads';
+$dbname = 'gradesads';
 $username = 'root';
 $password = '';
 

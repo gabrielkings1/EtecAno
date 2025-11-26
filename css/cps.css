@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+:root{
+    --preto: #111;
+    --branco: #fff;
+    --luz: #666;
+    --luz-bg: #eee;
+    --vermelho: #8f1010;
+    --box-shadow: 0 .1rem 1rem rgba(0,0,0,0.15);
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .2s linear; 
+}
+
+body{
+    background: #fafafa;
+    padding-top: 110px;
+}
+
+/* HEADER */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.7rem 5%;
+    background: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2rem;
+    color: var(--preto);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.logo span{
+    color: var(--vermelho);
+}
+
+.social-icons a{
+    font-size: 1.6rem;
+    margin-left: 1rem;
+    color: var(--vermelho);
+    text-decoration: none;
+}
+
+/* CONTAINER */
+.container{
+    max-width: 900px;
+    margin: auto;
+    background: var(--branco);
+    padding: 3rem 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.titulo{
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--vermelho);
+    margin-bottom: 3rem;
+}
+
+/* SEÇÕES */
+.sobre{
+    margin-bottom: 3rem;
+}
+
+.sobre h2{
+    font-size: 2rem;
+    color: var(--preto);
+    margin-bottom: 1rem;
+}
+
+.sobre p{
+    font-size: 1.4rem;
+    color: var(--luz);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.sobre ul{
+    margin-left: 1.5rem;
+}
+
+.sobre ul li{
+    font-size: 1.4rem;
+    color: var(--luz);
+    margin-bottom: .6rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px){
+    .container{
+        padding: 2rem;
+    }
+
+    .titulo{
+        font-size: 2.2rem;
+    }
+
+    .sobre h2{
+        font-size: 1.7rem;
+    }
+
+    .sobre p,
+    .sobre ul li{
+        font-size: 1.25rem;
+    }
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar{
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--vermelho);
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  background: var(--luz);
+  color: var(--vermelho);
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+}
+
+.btn:hover{
+  background: var(--vermelho);
+  color: var(--branco);
+}
+
+@keyframes fadeIn{
+  0%{
+    top:50%;
+    opacity: 0;
+  }
+}
+
+.header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: var(--box-shadow);
+  background-color: var(--branco);
+  padding: 1.5rem 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.logo{
+  font-size: 2.5rem;
+  color: var(--luz);
+  text-transform: capitalize;
+}
+.logo span{
+  color: var(--vermelho);
+}
+
+
+.navbar a{
+  font-size: 2rem;
+  color: var(--luz);
+  text-transform: capitalize;
+  margin: 0 1rem;
+}
+.navbar a:hover{
+  color: var(--vermelho);
+}
+
+.icons div{
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--luz-bg);
+  color: var(--vermelho);
+  cursor: pointer;
+  text-align: center;
+}
+.icons div:hover{
+  background: var(--vermelho);
+  color: var(--branco);
+}
+
+#menu-btn{
+  display: none;
+}
+
+@media (max-width:1200px){
+  .header{
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width:991px){
+  html{
+    font-size: 55%;
+  }
+}
+
+.header #menu-btn{
+  display: none; 
+}
+
+.header .navbar{
+  position: static;    
+  top: auto;
+  left: auto;
+  right: auto;
+  background: transparent;
+  border-top: none;
+  border-bottom: none;
+  clip-path: none;
+  display: flex;      
+  align-items: center;
+  gap: 1rem;
+}
+
+.header .navbar a{
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: var(--luz);
+}
+
+.header .icons{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width:991px){
+  html{
+    font-size: 55%;
+  }
+
+  .header{
+    padding: 1.5rem 2rem;
+  }
+
+  .header #menu-btn{
+    display: inline-block;
+  }
+
+  .header .navbar{
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var(--branco);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    display: block;
+  }
+
+  .header .navbar.active{
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+  }
+
+  .header .navbar a{
+    display: block;
+    margin: 2rem;
+  }
+}
+
+.header .navbar.active{
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.header .navbar a{
+  display: block;
+  margin: 2rem;
+}
+
+.search-form{
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70rem;
+  background: var(--branco);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeIn .2s linear;
+}
+
+.search-form.active{
+  display: flex;
+}
+
+.search-form input{
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  background: var(--luz-bg);
+  font-size: 1.6rem;
+  color: var(--luz);
+}
+
+.search-form label{
+  font-size: 2.5rem;
+  color: var(--vermelho); 
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.search-form label:hover{
+  color: var(--vermelho); 
+}
+
+/* login-form (restored) */
+.login-form{
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40rem;
+  background: var(--branco);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn .2s linear;
+  display: none;
+}
+
+.login-form.active{
+  display: block;
+}
+
+.login-form h3{
+  font-size: 2.5rem;
+  color: var(--vermelho);
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.login-form .box{
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  background: var(--luz-bg);
+  font-size: 1.6rem;
+  color: var(--luz);
+  margin: .7rem 0;
+}
+
+.login-form .flex{
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.login-form .flex label{
+  font-size: 1.5rem;
+  color: var(--luz);
+  cursor: pointer;
+}
+
+.login-form .flex a{
+  font-size: 1.5rem;
+  color: var(--luz);
+  margin-left: auto;
+}
+
+.login-form .flex a:hover{
+  color: var(--vermelho);
+  text-decoration: underline;
+}
+
+.login-form .btn{
+  width: 100%;
+}
+
+.login-form #login{
+ background: var(--luz-bg);
+}
+
+.login-form p{
+  font-size: 1.5rem;
+  color: var(--luz);
+  line-height: 1.5;
+  padding-top: 1.5rem;
+}
+
+.login-form p a{
+  color: var(--vermelho);
+}
+
+.login-form p a:hover{
+  color: var(--vermelho);
+  text-decoration: underline;
+}
+
+.login-form .btn:hover,
+.login-form #login:hover{
+  background: var(--vermelho);
+  color: var(--branco);
+  cursor: pointer;
+  transition: background .2s linear, color .2s linear;
+}
+
+#close-contact-info{
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  font-size: 4rem;
+  color: var(--vermelho);
+}
+
+#close-contact-info:hover{
+  transform: rotate(90deg);
+}
+
+.contact-info{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35rem;
+  background: var(--branco);
+  height: 100%;
+  text-align: center;
+  z-index: 1100;
+  padding: 0 2rem;
+  padding-top: 5rem;
+  overflow-y: auto;
+  padding-bottom: 6rem;
+  display: none;
+}
+
+.contact-info.active{
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, .7);
+  display: block;
+}
+
+.contact-info .share{
+  position: absolute;
+  left: 50%;
+  bottom: 2.5rem;
+  transform: translateX(-50%);
+  padding-top: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contact-info .share a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  line-height: 1;
+  font-size: 2rem;
+  background: var(--luz-bg);
+  color: var(--preto);
+  cursor: pointer;
+  text-align: center;
+  border-top: none;
+  margin: 0;
+}
+
+.contact-info .info i:hover{
+  background: var(--vermelho);
+  color: var(--branco);
+}
+
+.contact-info .info h3{
+  font-size: 2rem;
+  color: var(--preto);
+  text-transform: capitalize;
+  padding: 1rem 0;
+}
+
+.contact-info .info p{
+  font-size: 1.6rem;
+  color: var(--luz);
+  line-height: 1.5;
+}
+
+.contact-info .share{
+  padding-top: 1rem;
+}
+
+.contact-info .share a{
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--luz-bg);
+  color: var(--preto);
+  cursor: pointer;
+  text-align: center;
+  border-top: var(--border);
+  margin-top: 1rem;
+}
+
+.contact-info .share a:hover{
+  background: var(--vermelho);
+  color: var(--branco);
+}
+
+.contact-info .share a,
+.contact-info .share a i {
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands", sans-serif !important;
+  font-style: normal;
+  line-height: 1;
+}
+
+.contact-info .share a.fas,
+.contact-info .share a i.fas {
+  font-weight: 900;
+}
+
+.contact-info .share a.fab,
+.contact-info .share a i.fab {
+  font-weight: 400;
+}
+
+.contact-info .share a,
+.contact-info .share a i{
+  color: var(--preto);
+  background: var(--luz-bg);
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1, h2{
+  font-size: 3.4rem;
+  color: var(--vermelho);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+#subtitulo{
+  color: var(--vermelho);
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+p#textoEtec{
+  font-size: 2.6rem;
+  color: var(--luz);
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+  padding-left: 8%;
+  padding-right: 8%;
+  text-align: center;
+}
+
+.contact-info .info i{
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  font-size: 2.6rem;
+}
+
+.contact-info .info h3{
+  font-size: 2.2rem;
+}
+
+.contact-info .info p{
+  font-size: 1.8rem;
+}
+
+.contact-info .share a{
+  height: 6rem;
+  width: 6rem;
+  font-size: 2.4rem;
+}
+
+.contact-info .share a i{
+  font-size: 2.4rem;
+}
+
+.created-section{
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.created-section h2{
+  font-size: 3rem;
+  color: var(--vermelho);
+  margin-bottom: 2rem;
+}
+
+/* --- New styles: highlight titles, center content and increase font sizes --- */
+/* Emphasize headings site-wide (bigger & centered) */
+h1, h2{
+  font-size: 3.4rem;
+  letter-spacing: .4px;
+  margin: 2.4rem 0; /* mais espaçamento acima/abaixo dos títulos */
+}
+
+h3{
+  font-size: 2.6rem;
+  color: var(--vermelho);
+  text-align: center;
+  margin-top: 1.2rem;
+  margin-bottom: .8rem;
+}
+
+/* Styles specifically for the ADS course section */
+#curso-ads{
+  padding: 4rem 6%;
+  text-align: center;
+  background: transparent; /* keep same background but ensure consistent spacing */
+}
+
+/* Make ADS section main title and its inner h3 headings share the same size & centered */
+#curso-ads h2{
+  font-size: 3.0rem;
+  display: inline-block;
+  padding-bottom: .6rem;
+  margin-bottom: 1.6rem;
+}
+
+#curso-ads h3{
+  font-size: 3.0rem;
+  margin-top: 1.4rem;
+  margin-bottom: .8rem;
+  text-align: center;
+}
+
+#curso-ads p,
+#curso-ads ul{
+  font-size: 1.95rem;
+  color: var(--luz);
+  line-height: 1.8;
+  max-width: 1100px;
+  margin: 1rem auto;
+}
+
+#por-que-curso{
+  font-size: 3.0rem;
+  display: block;
+  padding-bottom: .4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p#textoEtec2{
+  font-size: 1.95rem; 
+  color: var(--luz);
+  text-align: center;
+  line-height: 1.6;
+  margin: 1.6rem auto; 
+  display: block;
+  max-width: 1100px;
+}
+
+#curso-ads ul{
+  display: inline-block;
+  text-align: left;
+  padding-left: 1.6rem;
+}
+
+#curso-ads ul li{
+  font-size: 2rem;
+  margin-bottom: .8rem;
+}
+
+@media (max-width: 991px){
+  h1, h2{ font-size: 3.6rem; }
+  h3{ font-size: 2.4rem; }
+  p#textoEtec{ font-size: 2.6rem; padding-left: 5%; padding-right: 5%; }
+  #curso-ads h2{ font-size: 2.8rem; }
+  #curso-ads h3{ font-size: 2.8rem; }
+  #curso-ads p, #curso-ads ul{ font-size: 1.9rem; }
+}
+
+@media (max-width: 700px){
+  h1, h2{ font-size: 3rem; }
+  h3{ font-size: 2rem; }
+  p#textoEtec{ font-size: 2.2rem; padding-left: 4%; padding-right: 4%; }
+  #curso-ads h2{ font-size: 2.6rem; }
+  #curso-ads p, #curso-ads ul{ font-size: 1.8rem; }
+}
+
+.created-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.created-content img{
+  max-width: 480px;
+  width: 48%;
+  height: auto;
+  border-radius: .6rem;
+  box-shadow: var(--box-shadow);
+  object-fit: cover;
+}
+
+.created-text{
+  max-width: 48rem;
+  text-align: center;
+}
+
+.created-text h4{
+  font-size: 2.2rem;
+  color: var(--preto);
+  margin-bottom: .6rem;
+}
+
+.created-text .muted{
+  font-size: 1.6rem;
+  color: var(--luz);
+}
+
+@media (max-width: 700px){
+  .created-section h2{
+    font-size: 2.4rem;
+  }
+  .created-content img{
+    width: 80%;
+    max-width: 420px;
+  }
+  .created-text h4{
+    font-size: 1.9rem;
+  }
+}
+
+p{
+  margin-bottom: 1.6rem; 
+}
+
+h2, h3{
+  margin-top: 1.4rem;
+}

@@ -14,23 +14,19 @@ searchForm.classList.toggle('active');
 };
 
 document.querySelector('#login-btn').onclick = () =>{
-  // if the page has an inline login form (header), toggle it
   if (loginForm) {
     loginForm.classList.toggle('active');
   } else {
-    // otherwise navigate to the standalone login page
     window.location.href = 'login.php';
   }
 };
 
-// Info button -> toggle contact panel (safe guards)
 if (infoBtn && contactInfo) {
   infoBtn.onclick = () => {
     contactInfo.classList.toggle('active');
   };
 }
 
-// Close button for contact panel
 if (closeContactBtn && contactInfo) {
   closeContactBtn.onclick = () => {
     contactInfo.classList.remove('active');

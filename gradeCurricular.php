@@ -15,55 +15,14 @@
 
   <nav class="navbar">
     <a href="index.php">Inicio</a>
-    <a href="#centroPaulaSouza">Centro Paula Souza</a>
-    <a href="#fatec">Fatec</a>
+    <a href="cps.php">Centro Paula Souza</a>
     <a href="login.php">Formulário</a>
   </nav>
-
-  <div class="icons">
-    <div id="menu-btn" class="fas fa-bars"></div>
-    <a id="info-btn" class="fas fa-info-circle" href="<?php echo $_SERVER['PHP_SELF']; ?>?contact=1" role="button"></a>
-    <div id="pesquisar-btn" class="fas fa-search"></div>
-    <div id="login-btn" class="fas fa-user"></div>
-  </div>
-  
-  <form action="" class="search-form">
-    <input type="search" name="" id="search-box" placeholder="Pesquisar...">
-    <label for="pesquisar-box" class="fas fa-search"></label>
-  </form>
-
- <!--login -->
-  <?php include __DIR__ . '/includes/login_form.php'; ?>
- <!--login fim -->
  
 </header>
 
 
   <a id="close-contact-info" class="fas fa-times" href="<?php echo htmlspecialchars($baseUrl); ?>" aria-label="Fechar"></a>
-
-  <div class="info">
-    <i class="fas fa-phone"></i>
-    <h3>número de telefone</h3>
-    <p>+14 3322-4908</p>
-  </div>
-
-  <div class="info">
-    <i class="fas fa-envelope"></i>
-    <h3>endereço de email</h3>
-    <p>E066acad@cps.sp.gov.br</p>
-  </div>
-
-  <div class="info">
-    <i class="fas fa-map-marker-alt"></i>
-    <h3>Localização da Sede</h3>
-    <p>Ourinhos SP, Brasil</p>
-  </div>
-
-  <div class="share">
-    <a href="https://www.facebook.com/etecourinhos/?locale=pt_BR" class="Fab fa-facebook-f" aria-label="Facebook"></a>
-    <a href="https://www.youtube.com/channel/UCnLlxUyzUV11TGCLFFiMrSA" class="Fab fa-youtube" aria-label="YouTube"></a>
-    <a href="https://www.instagram.com/etecourinhos/?hl=en" class="Fab fa-instagram" aria-label="Instagram"></a>
-  </div>
 
 </div>
 

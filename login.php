@@ -1,71 +1,93 @@
 <?php
-include 'config.php';
+session_start();
+require_once "config.php";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = trim($_POST['email']);
-    $senha = $_POST['senha'];
-    
-    $sql = "SELECT * FROM usuarios WHERE email = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$email]);
-    $usuario = $stmt->fetch();
-    
-    if ($usuario && password_verify($senha, $usuario['senha'])) {
-        $_SESSION['usuario'] = [
-            'id' => $usuario['id'],
-            'nome' => $usuario['nome'],
-            'email' => $usuario['email']
-        ];
-        header("Location:");
-        exit();
+$erro = "";
+$sucesso = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $email = trim($_POST['email'] ?? "");
+    $senha = trim($_POST['senha'] ?? "");
+
+    if ($email === "" || $senha === "") {
+        $erro = "Preencha todos os campos!";
     } else {
-        $erro = "Email ou senha incorretos!";
+
+        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
+        $sql->execute([$email]);
+        $usuario = $sql->fetch(PDO::FETCH_ASSOC);
+
+        if ($usuario) {
+
+            if (password_verify($senha, $usuario['senha'])) {
+
+                // CORRIGIDO — SESSION COMPATÍVEL COM sugestoes.php
+                $_SESSION['usuario'] = [
+                    'id' => $usuario['id'],
+                    'nome' => $usuario['nome'],
+                    'email' => $usuario['email']
+                ];
+
+                header("Location: sugestoes.php");
+                exit;
+
+            } else {
+                $erro = "Senha incorreta.";
+            }
+
+        } else {
+            $erro = "E-mail não encontrado.";
+        }
     }
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Grade ADS</title>
-    <link rel="stylesheet" href="css/etecano.css">
+    <title>Manual do Programador Etecano</title>
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
 </head>
+
 <body>
-    <div class="form-container">
-        <h2>Login</h2>
-        
-        <?php if (isset($_GET['sucesso'])): ?>
-            <div class="sucesso"><?php echo htmlspecialchars($_GET['sucesso']); ?></div>
-        <?php endif; ?>
-        
-        <?php if (isset($erro)): ?>
-            <div class="erro"><?php echo $erro; ?></div>
-        <?php endif; ?>
-        
-        <form method="POST" id="loginForm">
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
-            </div>
-            
-            <button type="submit">Entrar</button>
-        </form>
-        
-        <div class="links">
-            <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
-            <p><a href="index.php">Voltar para a página inicial</a></p>
+
+<div class="form-container">
+
+    <h2>Login</h2>
+
+    <?php if ($sucesso): ?>
+        <div class="sucesso"><?= $sucesso ?></div>
+    <?php endif; ?>
+
+    <?php if ($erro): ?>
+        <div class="erro"><?= $erro ?></div>
+    <?php endif; ?>
+
+    <form id="loginForm" action="" method="POST">
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
         </div>
-    </div>
-   <script src="js/login.js"></script>
+
+        <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+        </div>
+
+        <button type="submit">Entrar</button>
+
+        <div class="links">
+            Não possui cadastro? <a href="cadastro.php">Criar conta</a>
+        </div>
+    </form>
+
+</div>
+
+<script src="login.js"></script>
+
 </body>
 </html>

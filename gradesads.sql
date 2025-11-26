@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Tempo de geração: 26/11/2025 às 12:45
+-- Host: 127.0.0.1
+-- Tempo de geração: 26-Nov-2025 às 13:59
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.2.12
+-- versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `grade_ads`
+-- Banco de dados: `gradesads`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `materias`
+-- Estrutura da tabela `materias`
 --
 
 CREATE TABLE `materias` (
@@ -39,7 +39,7 @@ CREATE TABLE `materias` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuarios`
+-- Estrutura da tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -55,20 +55,20 @@ CREATE TABLE `usuarios` (
 --
 
 --
--- Índices de tabela `materias`
+-- Índices para tabela `materias`
 --
 ALTER TABLE `materias`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `usuarios`
+-- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --

@@ -1,7 +1,6 @@
-/* IMPORTA Poppins */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* VARIÁVEIS */
 :root{
   --amarelo: #f5bf23;
   --preto: #111;
@@ -13,7 +12,6 @@
   --box-shadow-card: 0 .1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
-/* RESET */
 *{
   margin: 0;
   padding: 0;
@@ -22,9 +20,9 @@
 }
 
 html{
-  font-size: 55%; /* diminui o tamanho base */
+  font-size: 55%; 
 }
-/* ---------- BASE DO LAYOUT ---------- */
+
 body{
     font-family: 'Poppins', sans-serif;
     background: #f5f5f5;
@@ -35,10 +33,9 @@ body{
     justify-content: center;
     align-items: center;
 
-    min-height: 100vh; /* centraliza verticalmente */
+    min-height: 100vh; 
 }
 
-/* ---------- CONTAINER CENTRAL ---------- */
 .container{
     background: #ffffff;
     padding: 3rem 3.5rem;
@@ -50,7 +47,6 @@ body{
     text-align: center;
 }
 
-/* ---------- TÍTULO ---------- */
 .titulo{
     font-size: 2.4rem;
     margin-bottom: 2rem;
@@ -58,7 +54,6 @@ body{
     font-weight: 600;
 }
 
-/* ---------- MENSAGENS ---------- */
 .mensagem{
     padding: 1rem 1.4rem;
     border-radius: .8rem;
@@ -71,7 +66,6 @@ body{
     color: #a80000;
 }
 
-/* ---------- FORMULÁRIO ---------- */
 .form-group{
     text-align: left;
     margin-bottom: 1.5rem;
@@ -100,7 +94,6 @@ body{
     resize: vertical;
 }
 
-/* ---------- BOTÃO ---------- */
 button[type="submit"]{
     width: 100%;
     padding: 1rem 0;
@@ -118,12 +111,11 @@ button[type="submit"]:hover{
     transform: translateY(-2px);
 }
 
-/* MENSAGENS */
 .mensagem{
   padding: .9rem 1.1rem;
   border-radius: .7rem;
   margin-bottom: 1.4rem;
-  font-size: 1.4rem; /* reduzido */
+  font-size: 1.4rem; 
   font-weight: 500;
 }
 
@@ -137,7 +129,6 @@ button[type="submit"]:hover{
   color: #8f1010;
 }
 
-/* LISTA DE SUGESTÕES */
 .sugestoes-lista{
   margin-top: 2.2rem;
   padding: 1.4rem;
@@ -156,22 +147,21 @@ button[type="submit"]:hover{
 }
 
 .sugestao-item h4{
-  font-size: 1.7rem; /* reduzido */
+  font-size: 1.7rem; 
   color: var(--vermelho);
 }
 
 .sugestao-item p{
-  font-size: 1.35rem; /* reduzido */
+  font-size: 1.35rem; 
   color: #555;
   margin-top: .3rem;
 }
 
 .sugestao-item small{
   color: #777;
-  font-size: 1.2rem; /* reduzido */
+  font-size: 1.2rem; 
 }
 
-/* RESPONSIVO */
 @media (max-width: 600px){
   .header h1{
     font-size: 2rem;

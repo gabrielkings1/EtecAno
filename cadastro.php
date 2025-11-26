@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -18,8 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $pdo->prepare($sql);
 
         if ($stmt->execute([$nome, $email, $senha_hash])) {
-            // successful registration -> redirect to sugestoes.php
-            header("Location: sugestoes.php");
+           header("Location: login.php?cadastro=sucesso");
             exit();
         } else {
             $erro = "Erro ao cadastrar. O e-mail pode já estar em uso.";
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro - ADS</title>
-    <link rel="stylesheet" href="css/etecano.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
