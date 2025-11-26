@@ -16,3 +16,7 @@ Sistema web para visualização da grade curricular do curso de Análise e Desen
 
 ## 👥 Desenvolvido por
 [Filipi Samuel Mariano de Souza e Gabriel dos Reis Gomes] - Hacktoon Programação Web II
+
+## link do site
+
+http://etecano.lovestoblog.com/
