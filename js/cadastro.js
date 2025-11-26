@@ -17,13 +17,10 @@
                 alert('A senha deve ter pelo menos 6 caracteres');
                 return false;
             }
-
-            // all good — allow submit
             return true;
         }
         
         function validarEmail(email) {
-            // basic regex for common email validation
             const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return re.test(email);
         }

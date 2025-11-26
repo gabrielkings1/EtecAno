@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
     $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
 
-    // Basic server-side validation
     if ($nome === '' || $email === '' || $senha === '') {
         $erro = 'Preencha todos os campos corretamente.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {

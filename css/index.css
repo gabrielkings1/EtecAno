@@ -572,7 +572,6 @@ h3{
   margin: 1rem auto;
 }
 
-/* Styles for the "Por que este curso é diferente" heading and duplicated paragraphs */
 #por-que-curso{
   font-size: 3.0rem;
   display: block;
@@ -581,18 +580,16 @@ h3{
   text-align: center;
 }
 
-/* Make small info paragraphs match other normal paragraph sizes (except the large #textoEtec) */
 p#textoEtec2{
-  font-size: 1.95rem; /* same as #curso-ads general paragraphs */
+  font-size: 1.95rem; 
   color: var(--luz);
   text-align: center;
   line-height: 1.6;
-  margin: 1.6rem auto; /* maior espaçamento abaixo do parágrafo */
+  margin: 1.6rem auto; 
   display: block;
   max-width: 1100px;
 }
 
-/* center section lists as blocks but keep list items left-aligned for readability */
 #curso-ads ul{
   display: inline-block;
   text-align: left;
@@ -604,12 +601,10 @@ p#textoEtec2{
   margin-bottom: .8rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 991px){
   h1, h2{ font-size: 3.6rem; }
   h3{ font-size: 2.4rem; }
   p#textoEtec{ font-size: 2.6rem; padding-left: 5%; padding-right: 5%; }
-  /* keep ADS headers balanced on medium screens */
   #curso-ads h2{ font-size: 2.8rem; }
   #curso-ads h3{ font-size: 2.8rem; }
   #curso-ads p, #curso-ads ul{ font-size: 1.9rem; }
@@ -669,12 +664,10 @@ p#textoEtec2{
   }
 }
 
-/* Espaçamento geral entre parágrafos e próximos títulos */
 p{
-  margin-bottom: 1.6rem; /* afasta títulos seguintes que venham logo abaixo */
+  margin-bottom: 1.6rem; 
 }
 
-/* Garantia extra: se um parágrafo vier antes de um título, aumentamos o espaçamento superior do título */
 h2, h3{
   margin-top: 1.4rem;
 }

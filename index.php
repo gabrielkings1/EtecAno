@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/etecano.css">
+  <link rel="stylesheet" href="css/index.css">
   <title>Manual do Programador Etecano</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -24,8 +24,9 @@
   <!-- icons dentro do header; cada ícone é um elemento independente -->
   <div class="icons">
     <div id="menu-btn" class="fas fa-bars"></div>
-    <div id="info-btn" class="fas fa-info-circle"></div>
+    <a id="info-btn" class="fas fa-info-circle" href="<?php echo $_SERVER['PHP_SELF']; ?>?contact=1" role="button"></a>
     <div id="pesquisar-btn" class="fas fa-search"></div>
+    <div id="login-btn" class="fas fa-user"></div>
   </div>
 
   <form action="" class="search-form">
@@ -33,52 +34,44 @@
     <label for="pesquisar-box" class="fas fa-search"></label>
   </form>
 
- <!--login-->
- <form action="" class="login-form">
-   <h3>Login</h3>
-   <input type="email" placeholder="Insira seu email" class="box">
-   <input type="password" placeholder="Insira sua senha" class="box">
-   <div class="flex">
-   <input type="checkbox" name="checkbox" id="checkbox">
-   <label for="lembrar-me">Lembrar-me</label>
-   <a href="#">Esqueceu sua senha?</a>
-   </div>
-
-   <input type="submit" value="login" class="btn" id="login">
-   <p>Não possui uma conta<a href="#"> Crie uma!</a></p>
-
- </form>
- <!--login fim-->
+ <!--login -->
+ <?php include __DIR__ . '/includes/login_form.php'; ?>
+ <!--login fim -->
 
 </header>
 
-<div class="contact-info">
+<?php
+  // Server-side rendering of contact-info on this page (no include)
+  $show_contact = isset($_GET['contact']) && ($_GET['contact'] === '1' || $_GET['contact'] === 'true');
+  $baseUrl = strtok($_SERVER['REQUEST_URI'], '?');
+?>
+<div class="contact-info <?php echo $show_contact ? 'active' : ''; ?>">
 
-<div id="close-contact-info" class="fas fa-times"></div>
-  
-<div class="info">
-<i class="fas fa-phone"></i>
-<h3>número de telefone</h3>
-<p>+14 3322-4908</p>
-</div>
+  <a id="close-contact-info" class="fas fa-times" href="<?php echo htmlspecialchars($baseUrl); ?>" aria-label="Fechar"></a>
 
-<div class="info">
-<i class="fas fa-envelope"></i>
-<h3>endereço de email</h3>
-<p>E066acad@cps.sp.gov.br</p>
-</div>
+  <div class="info">
+    <i class="fas fa-phone"></i>
+    <h3>número de telefone</h3>
+    <p>+14 3322-4908</p>
+  </div>
 
-<div class="info">
-<i class="fas fa-map-marker-alt"></i>
-<h3>Localização da Sede</h3>
-<p>Ourinhos SP, Brasil</p>
-</div>
+  <div class="info">
+    <i class="fas fa-envelope"></i>
+    <h3>endereço de email</h3>
+    <p>E066acad@cps.sp.gov.br</p>
+  </div>
 
-<div class="share">
-    <a href="https://www.facebook.com/etecourinhos/?locale=pt_BR" class="Fab fa-facebook-f"></a>
-    <a href="https://www.youtube.com/channel/UCnLlxUyzUV11TGCLFFiMrSA" class="Fab fa-youtube"></a>
-    <a href="https://www.instagram.com/etecourinhos/?hl=en" class="Fab fa-instagram"></a>
-</div>
+  <div class="info">
+    <i class="fas fa-map-marker-alt"></i>
+    <h3>Localização da Sede</h3>
+    <p>Ourinhos SP, Brasil</p>
+  </div>
+
+  <div class="share">
+    <a href="https://www.facebook.com/etecourinhos/?locale=pt_BR" class="Fab fa-facebook-f" aria-label="Facebook"></a>
+    <a href="https://www.youtube.com/channel/UCnLlxUyzUV11TGCLFFiMrSA" class="Fab fa-youtube" aria-label="YouTube"></a>
+    <a href="https://www.instagram.com/etecourinhos/?hl=en" class="Fab fa-instagram" aria-label="Instagram"></a>
+  </div>
 
 </div>
 
