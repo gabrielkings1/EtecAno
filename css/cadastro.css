@@ -1,0 +1,16 @@
+/* cadastro.css — reuse login styles and adapt for registration page */
+@import url('login.css');
+
+/* override the action button color for cadastro */
+.form-container button[type="submit"]{
+  background: var(--vermelho);
+  color: #fff;
+}
+
+.form-container button[type="submit"]:hover{
+  opacity: .95;
+  transform: translateY(-1px);
+}
+
+/* slight tweak to heading for registration */
+.form-container h2{ letter-spacing: .2px; }

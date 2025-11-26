@@ -11,20 +11,19 @@
 <body>
 
 <header class="header">
-  <a href="etecano.html" class="logo">Etec<span>Ano</span></a>
+  <a href="index.php" class="logo">Etec<span>Ano</span></a>
 
   <nav class="navbar">
-    <a href="etecano.html">Inicio</a>
+    <a href="index.php">Inicio</a>
     <a href="#centroPaulaSouza">Centro Paula Souza</a>
     <a href="#fatec">Fatec</a>
-    <a href="#formulario">Formulário</a>
+    <a href="login.php">Formulário</a>
   </nav>
 
   <div class="icons">
     <div id="menu-btn" class="fas fa-bars"></div>
     <div id="info-btn" class="fas fa-info-circle"></div>
     <div id="pesquisar-btn" class="fas fa-search"></div>
-    <div id="login-btn" class="fas fa-user"></div>
   </div>
   
   <form action="" class="search-form">
@@ -34,17 +33,17 @@
 
  <!--login-->
  <form action="" class="login-form">
-    <h3>Login</h3>
-    <input type="email" placeholder="Insira seu email" class="box">
-    <input type="password" placeholder="Insira sua senha" class="box">
-    <div class="flex">
-    <input type="checkbox" name="checkbox" id="checkbox">
-    <label for="lembrar-me">Lembrar-me</label>
-    <a href="#">Esqueceu sua senha?</a>
-    </div>
+   <h3>Login</h3>
+   <input type="email" placeholder="Insira seu email" class="box">
+   <input type="password" placeholder="Insira sua senha" class="box">
+   <div class="flex">
+   <input type="checkbox" name="checkbox" id="checkbox">
+   <label for="lembrar-me">Lembrar-me</label>
+   <a href="#">Esqueceu sua senha?</a>
+   </div>
 
-    <input type="submit" value="login" class="btn" id="login">
-    <p>Não possui uma conta<a href="#"> Crie uma!</a></p>
+   <input type="submit" value="login" class="btn" id="login">
+   <p>Não possui uma conta<a href="#"> Crie uma!</a></p>
 
  </form>
  <!--login fim-->
@@ -155,20 +154,38 @@
     <h2>4º Ano — Análise e Desenvolvimento de Sistemas</h2>
     <p id="grade">Disciplinas e Aulas Previstas</p>
     <ul>
-      <li>Banco de Dados II - 80 Aulas</li>
-      <li>Educação Física - 80 Aulas</li>
-      <li>Ética e Cidadania Organizacional - 40 Aulas</li>
-      <li>Geografia - 80 Aulas</li>
-      <li>História - 40 Aulas</li>
-      <li>Internet Protocolos e Segurança de Sistemas da Informação - 80 Aulas</li>
-      <li>Língua Inglesa - 80 Aulas</li>
-      <li>Língua Portuguesa - 160 Aulas</li>
-      <li>Matemática - 120 Aulas</li>
-      <li>Planejamento e Desenvolvimnto do Trabalho de Conclusão de Curso em Desenvolvimento de Sistemas - 120 Aulas</li>
-      <li>Programação de Aplicativos Mobile II - 80 Aulas</li>
-      <li>Programação Web III - 80 Aulas</li>
-      <li>Qualidade e Teste de Software - 80 Aulas</li>
-      <li>Sociologia - 80 Aulas</li>
+      <li>Projeto Integrador I - 160 Aulas</li>
+      <li>Técnicas Avançadas de Banco de Dados Relacional e não Relacional - 80 Aulas</li>
+      <li>Técnicas Avançadas de Programação - 80 Aulas</li>
+      <li>Técnicas Avançadas de Programação Web e Mobile - 80 Aulas</li>
+      <li>Estrutura de Dados - 160 Aulas</li>
+      <li>Engenharia de Software - 160 Aulas</li>
+      <li>Interação Humano Computador - 80 Aulas</li>
+      <li>Inteligência Corporativa e Modelos de Negócios na Era Digital - 80 Aulas</li>
+      <li>Organização de Computadores e Sistemas Operacionais - 80 Aulas</li>
+      <li>Gestão Ágil de Projetos de Software - 80 Aulas</li>
+      <li>Matemática Discreta - 80 Aulas</li>
+      <li>Língua Inglesa I - 80 Aulas</li>
+    </ul>
+    <a class="btn" href="#top">Voltar ao topo</a>
+  </section>
+
+  <section id="faculdade2" class="grade-detail-section">
+    <h2>5º Ano — Análise e Desenvolvimento de Sistemas</h2>
+    <p id="grade">Disciplinas e Aulas Previstas</p>
+    <ul>
+      <li>Projeto Integrador II - 160 Aulas</li>
+      <li>Programação Multiplataforma - 160 Aulas</li>
+      <li>Modelagem de Padrões de Projetos - 160 Aulas</li>
+      <li>Inteligência Artificial e Aprendizagem de Máquina - 80 Aulas</li>
+      <li>Computação em Nuvem - 80 Aulas</li>
+      <li>Sistemas Distribuidos Aplicados à Internet das Coisas - 80 Aulas</li>
+      <li>Integração e Entrega Continua - 80 Aulas</li>
+      <li>Segurança e Defesa Cibernética - 80 Aulas</li>
+      <li>Business Intelligence e Big Data - 80 Aulas</li>
+      <li>Sistema de Informação e Tecnologias Emergentes - 80 Aulas</li>
+      <li>Estatística Aplicada - 80 Aulas</li>
+      <li>Língua Inglesa II - 80 Aulas</li>
     </ul>
     <a class="btn" href="#top">Voltar ao topo</a>
   </section>

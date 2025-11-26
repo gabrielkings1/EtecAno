@@ -243,6 +243,7 @@ html::-webkit-scrollbar-thumb{
   color: var(--vermelho); 
 }
 
+/* login-form (restored) */
 .login-form{
   position: absolute;
   top: 120%;
@@ -466,7 +467,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 h1, h2{
-  font-size: 3rem;
+  font-size: 3.4rem;
   color: var(--vermelho);
   text-align: center;
   margin: 2rem 0;
@@ -479,13 +480,13 @@ h1, h2{
 }
 
 p#textoEtec{
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   color: var(--luz);
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  padding-left: 20vh;
-  padding-right: 20vh;
-  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+  padding-left: 8%;
+  padding-right: 8%;
+  text-align: center;
 }
 
 .contact-info .info i{
@@ -522,6 +523,104 @@ p#textoEtec{
   font-size: 3rem;
   color: var(--vermelho);
   margin-bottom: 2rem;
+}
+
+/* --- New styles: highlight titles, center content and increase font sizes --- */
+/* Emphasize headings site-wide (bigger & centered) */
+h1, h2{
+  font-size: 3.4rem;
+  letter-spacing: .4px;
+  margin: 2.4rem 0; /* mais espaçamento acima/abaixo dos títulos */
+}
+
+h3{
+  font-size: 2.6rem;
+  color: var(--vermelho);
+  text-align: center;
+  margin-top: 1.2rem;
+  margin-bottom: .8rem;
+}
+
+/* Styles specifically for the ADS course section */
+#curso-ads{
+  padding: 4rem 6%;
+  text-align: center;
+  background: transparent; /* keep same background but ensure consistent spacing */
+}
+
+/* Make ADS section main title and its inner h3 headings share the same size & centered */
+#curso-ads h2{
+  font-size: 3.0rem;
+  display: inline-block;
+  padding-bottom: .6rem;
+  margin-bottom: 1.6rem;
+}
+
+#curso-ads h3{
+  font-size: 3.0rem;
+  margin-top: 1.4rem;
+  margin-bottom: .8rem;
+  text-align: center;
+}
+
+#curso-ads p,
+#curso-ads ul{
+  font-size: 1.95rem;
+  color: var(--luz);
+  line-height: 1.8;
+  max-width: 1100px;
+  margin: 1rem auto;
+}
+
+/* Styles for the "Por que este curso é diferente" heading and duplicated paragraphs */
+#por-que-curso{
+  font-size: 3.0rem;
+  display: block;
+  padding-bottom: .4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Make small info paragraphs match other normal paragraph sizes (except the large #textoEtec) */
+p#textoEtec2{
+  font-size: 1.95rem; /* same as #curso-ads general paragraphs */
+  color: var(--luz);
+  text-align: center;
+  line-height: 1.6;
+  margin: 1.6rem auto; /* maior espaçamento abaixo do parágrafo */
+  display: block;
+  max-width: 1100px;
+}
+
+/* center section lists as blocks but keep list items left-aligned for readability */
+#curso-ads ul{
+  display: inline-block;
+  text-align: left;
+  padding-left: 1.6rem;
+}
+
+#curso-ads ul li{
+  font-size: 2rem;
+  margin-bottom: .8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px){
+  h1, h2{ font-size: 3.6rem; }
+  h3{ font-size: 2.4rem; }
+  p#textoEtec{ font-size: 2.6rem; padding-left: 5%; padding-right: 5%; }
+  /* keep ADS headers balanced on medium screens */
+  #curso-ads h2{ font-size: 2.8rem; }
+  #curso-ads h3{ font-size: 2.8rem; }
+  #curso-ads p, #curso-ads ul{ font-size: 1.9rem; }
+}
+
+@media (max-width: 700px){
+  h1, h2{ font-size: 3rem; }
+  h3{ font-size: 2rem; }
+  p#textoEtec{ font-size: 2.2rem; padding-left: 4%; padding-right: 4%; }
+  #curso-ads h2{ font-size: 2.6rem; }
+  #curso-ads p, #curso-ads ul{ font-size: 1.8rem; }
 }
 
 .created-content{
@@ -568,4 +667,14 @@ p#textoEtec{
   .created-text h4{
     font-size: 1.9rem;
   }
+}
+
+/* Espaçamento geral entre parágrafos e próximos títulos */
+p{
+  margin-bottom: 1.6rem; /* afasta títulos seguintes que venham logo abaixo */
+}
+
+/* Garantia extra: se um parágrafo vier antes de um título, aumentamos o espaçamento superior do título */
+h2, h3{
+  margin-top: 1.4rem;
 }

@@ -244,6 +244,7 @@ html::-webkit-scrollbar-thumb{
   color: var(--vermelho); 
 }
 
+/* login-form (restored) */
 .login-form{
   position: absolute;
   top: 120%;
