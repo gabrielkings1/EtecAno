@@ -1,7 +1,7 @@
-<?php
+<?php 
 session_start();
+require_once "config.php"; 
 
-// Verifica login usando o MESMO nome de sessão do login.php
 if (!isset($_SESSION['usuario'])) {
     header("Location: login.php?erro=nao_logado");
     exit;
@@ -10,7 +10,6 @@ if (!isset($_SESSION['usuario'])) {
 $mensagem = "";
 $tipo = "";
 
-// Se enviou o formulário
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nome = trim($_POST['nome_materia'] ?? '');
@@ -21,9 +20,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mensagem = "Por favor, preencha todos os campos!";
         $tipo = "erro";
     } else {
-        // aqui você salvaria no banco se quiser (agora somente redireciona)
-        header("Location: index.php?sucesso=Sugestão enviada!");
-        exit();
+
+        try {
+            $sql = $pdo->prepare("
+                INSERT INTO materias (nome, descricao, semestre, carga_horaria, tipo)
+                VALUES (?, ?, ?, NULL, 'técnica')
+            ");
+
+            $semestre = intval($ano);
+
+            $sql->execute([
+                $nome,
+                $descricao,
+                $semestre
+            ]);
+
+            header("Location: index.php?sucesso=Sugestão cadastrada com sucesso!");
+            exit;
+
+        } catch (PDOException $e) {
+            $mensagem = "Erro ao salvar sugestão: " . $e->getMessage();
+            $tipo = "erro";
+        }
     }
 }
 ?>
